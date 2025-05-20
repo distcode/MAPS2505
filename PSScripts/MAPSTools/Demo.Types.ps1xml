@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Types>
+	<Type>
+		<Name>Microsoft.PowerShell.Commands.ComputerInfo</Name>
+		<Members>
+
+			<AliasProperty>
+				<Name>InstDate</Name>
+				<ReferencedMemberName>OSInstallDate</ReferencedMemberName>
+			</AliasProperty>
+
+			<NoteProperty>
+				<Name>MAPSInfo</Name>
+				<Value>Maps Kurs</Value>
+			</NoteProperty>
+
+			<ScriptProperty>
+				<Name>OSInstallDuration</Name>
+				<GetScriptBlock>
+					(Get-Date) - $this.OsInstallDate
+				</GetScriptBlock>
+			</ScriptProperty>
+
+			<PropertySet>
+				<Name>OSInstallInfo</Name>
+				<ReferencedProperties>
+					<Name>OSInstallDate</Name>
+					<Name>OSInstallDuration</Name>
+                    <Name>OsLastBootUpTime</Name>
+				</ReferencedProperties>
+			</PropertySet>
+
+		</Members>
+	</Type>
+</Types>
