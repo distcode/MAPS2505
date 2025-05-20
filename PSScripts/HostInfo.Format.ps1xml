@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Configuration>
+	<ViewDefinitions>
+
+		<View>
+			<Name>StdOutput</Name>
+			<ViewSelectedBy>
+				<TypeName>HostInfo</TypeName>
+			</ViewSelectedBy>
+
+			<TableControl>
+
+				<TableHeaders>
+
+					<TableColumnHeader>
+						<Label>Host</Label>
+						<!-- <Alignment>right-left-center</Alignment> -->
+					</TableColumnHeader>
+
+					<TableColumnHeader>
+						<Label>OS</Label>
+					</TableColumnHeader>
+
+                    <TableColumnHeader>
+						<Label>Memory</Label>
+					</TableColumnHeader>
+
+                    <TableColumnHeader>
+						<Label>MemoryMB</Label>
+                        <Alignment>right</Alignment>
+					</TableColumnHeader>
+
+				</TableHeaders>
+				<TableRowEntries>
+					<TableRowEntry>
+						<TableColumnItems>
+
+							<TableColumnItem>
+								<PropertyName>Hostname</PropertyName>
+							</TableColumnItem>
+
+							<TableColumnItem>
+								<!-- <ScriptBlock> any PS Scriptscode ($_. !) </ScriptBlock> -->
+                                <PropertyName>OS</PropertyName>
+							</TableColumnItem>
+
+                            <TableColumnItem>
+								<PropertyName>RAM</PropertyName>
+							</TableColumnItem>
+
+                            <TableColumnItem>
+								<ScriptBlock>$_.RAM * 1024</ScriptBlock>
+                                <!-- <PropertyName>OS</PropertyName> -->
+							</TableColumnItem>
+
+						</TableColumnItems>
+					</TableRowEntry>
+				</TableRowEntries>
+
+			</TableControl>
+
+		</View>
+
+		<View>
+			<Name>StdOutput</Name>
+			<ViewSelectedBy>
+				<TypeName>HostInfo</TypeName>
+			</ViewSelectedBy>
+
+			<ListControl>
+				<ListEntries>
+					<ListEntry>
+						<ListItems>
+
+							<ListItem>
+								<Label>Host</Label>
+								<PropertyName>Hostname</PropertyName>
+							</ListItem>
+
+							<ListItem>
+								<Label>OS</Label>
+								<PropertyName>OS</PropertyName>
+								<!-- <ItemSelectionCondition>
+									<ScriptBlock>$_.basename -notlike "my*"</ScriptBlock>
+								</ItemSelectionCondition> -->
+							</ListItem>
+
+							<ListItem>
+								<Label>Memory</Label>
+								<PropertyName>RAM</PropertyName>
+							</ListItem>
+
+							<ListItem>
+								<Label>MemoryMB</Label>
+								<ScriptBlock>$_.RAM * 1024</ScriptBlock>
+							</ListItem>
+
+						</ListItems>
+					</ListEntry>
+				</ListEntries>
+			</ListControl>
+		</View>
+
+		<View>
+			<Name>StdOutput</Name>
+			<ViewSelectedBy>
+				<TypeName>HostInfo</TypeName>
+			</ViewSelectedBy>
+
+			<WideControl>
+
+				<WideEntries>
+					<WideEntry>
+
+						<WideItem>
+							<!-- <PropertyName>Basename</PropertyName> -->
+                            <ScriptBlock>"$($_.Hostname) - $($_.OS)"</ScriptBlock>
+						</WideItem>
+
+					</WideEntry>
+				</WideEntries>
+
+			</WideControl>
+
+		</View>
+
+	</ViewDefinitions>
+</Configuration>
