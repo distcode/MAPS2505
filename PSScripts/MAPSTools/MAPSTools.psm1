@@ -49,5 +49,5 @@ function Write-Status {
 [psobject].Assembly.GetType('System.Management.Automation.TypeAccelerators')::Add('HostInfo',[HostInfo])
 
 Export-ModuleMember -Variable MAPSStatus
-Export-ModuleMember -Function Write-Hello
-Export-ModuleMember -Function Write-Status
+Export-ModuleMember -Function Write-*
+
