@@ -14,6 +14,7 @@ Get-PackageSource
 # Publish / Upload module to LocalSBMRepo
 Publish-Module -Path C:\MAPS2403\MAPSTools -Repository LocalSMBRepo -NuGetApiKey 'AnyPossibleKey'
 
+
 ## For Microsoft.PowerShell.PSResourceGet module in Windows PowerShell and PowerShell 7
 
 # Register the repo on a workstation/server
@@ -23,7 +24,7 @@ Register-PSResourceRepository -Name 'LocalSMBRepo' -Trusted -Uri '\\dc1\PSLocalR
 Get-PSResourceRepository
 
 # Publish / Upload module to LocalSBMRepo
-Publish-Module -Path C:\MAPS2403\MAPSTools -Repository 'LocalSMBRepo' -NuGetApiKey 'anyText'
+Publish-PSResoruce -Path C:\MAPS2403\MAPSTools -Repository 'LocalSMBRepo'
 
 
 # MS Documentation: https://learn.microsoft.com/en-us/powershell/gallery/how-to/working-with-local-psrepositories?view=powershellget-3.x
