@@ -17,6 +17,11 @@
         <IP>1.2.3.6</IP>
         <OS>Windows Server 2003</OS>
       </Server>
+      <Server model="DELL">
+        <Name>Methusalix</Name>
+        <IP>1.2.3.7</IP>
+        <OS>Windows Server 2025</OS>
+      </Server>
     </Servers>
   </Site>
   <Site location="Vienna">
