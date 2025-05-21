@@ -21,6 +21,8 @@ try {
     
     $result = $a / $b
 
+    # throw 
+
     Get-ChildItem HKLM:\ 
     
 }
