@@ -21,6 +21,12 @@
             Name = 'Telnet-Server'
             Ensure = 'Absent'
         }
+
+        Environment SetbyDSC {
+            Name = 'SetByDSC'
+            Ensure = 'Present'
+            Value = 'MAPS'
+        }
     }
 }
 

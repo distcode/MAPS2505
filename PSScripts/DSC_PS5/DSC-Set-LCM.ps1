@@ -1,7 +1,7 @@
 ﻿
 configuration Set-LCM-Push
 {
-    $Computers = @("RDCB1","RDCB2")
+    $Computers = @("Maps-DC1","Maps-SRV1")
     
     Node $Computers
     {
@@ -11,6 +11,25 @@ configuration Set-LCM-Push
             ConfigurationMode = 'ApplyAndAutoCorrect'
             RefreshMode = 'Push'
             RebootNodeIfNeeded = $true
+            
+        }
+    }
+}
+
+[DSCLocalConfigurationManager()]
+configuration Set-LCM-Push-V5
+{
+    $Computers = @("Maps-DC1","Maps-SRV1")
+    
+    Node $Computers
+    {
+        Settings        
+        {
+            ConfigurationModeFrequencyMins = 120
+            ConfigurationMode = 'ApplyAndAutoCorrect'
+            RefreshMode = 'Push'
+            RebootNodeIfNeeded = $true
+            
         }
     }
 }

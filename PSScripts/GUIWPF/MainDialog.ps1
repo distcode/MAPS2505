@@ -98,7 +98,7 @@ $window.ButEdit.add_Click{
   )
   
   #open child form
-  $childwindow = C:\Users\TS\SkyDrive\PSInfo\myDemoScripts\GUIWPF\ChildDialog.ps1
+  $childwindow = .\ChildDialog.ps1
   #set result in Main
   $window.TxtInformation.Text = $childwindow.childText
 }
