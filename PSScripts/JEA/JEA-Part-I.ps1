@@ -22,7 +22,7 @@ winrm quickconfig
 # JEA-Endpunkt einrichten
 
 ## Pfadname zu einer neuen pssc-Datei festlegen
-$Path = "C:\Temp\jea1.pssc"
+$Path = "C:\maps2505\Temp\jea1.pssc"
 
 ## Get-UserInfo liefert den Wert von $PSSenderInfo zurück
 ## darin ist der Name des aufrufenden Anwenders zu finden
@@ -44,7 +44,7 @@ New-PSSessionConfigurationFile -Path $Path `
                                -ModulesToImport Microsoft.* `
                                -FunctionDefinitions $getUserInfo
 
-## Endpunkt anlegen
+## Endpunkt anleg
 Register-PSSessionConfiguration -Path $Path -Name JEA1 -Force
 
 ## JEA-Gruppe berechtigen

@@ -23,7 +23,7 @@ Add-ADGroupMember -Identity $infoAdmins -Members $infoUser
 # Endpoint & Role Assignment
 
 ## Pfadname zu einer neuen pssc-Datei festlegen
-$Path = "C:\Temp\jea3.pssc"
+$Path = "C:\Maps2505\Temp\jea3.pssc"
 
 ## Rollen definieren
 $roles = @{
