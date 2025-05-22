@@ -1,9 +1,0 @@
-#TYPE Selected.System.Diagnostics.Process
-"ProcessName","Id","WorkingSet","StartTime","PriorityBoostEnabled"
-"POWERPNT","6524","262488064","21.05.2025 10:21:17","True"
-"powershell","3676","103669760","21.05.2025 13:46:18","True"
-"powershell","12584","123527168","21.05.2025 09:14:35","True"
-"pwsh","2996","54800384","21.05.2025 08:37:10","True"
-"pwsh","5008","140296192","21.05.2025 08:38:01","True"
-"pwsh","8016","135303168","21.05.2025 08:15:25","True"
-"pwsh","9924","44904448","21.05.2025 08:37:08","True"
